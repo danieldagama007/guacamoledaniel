@@ -39,18 +39,19 @@
 .page-tabs .page-list li a[href],
 .section-tabs li a {
     display: block;
-    color: black;
+    color: #94a3b8;
     text-decoration: none;
     padding: 0.75em 1em;
 }
 
 .page-tabs .page-list li a[href]:visited {
-    color: black;
+    color: #94a3b8;
 }
 
 .page-tabs .page-list li a[href]:hover,
 .section-tabs li a:hover {
-    background-color: #CDA;
+    background-color: rgba(255, 255, 255, 0.05);
+    color: #f8fafc;
     cursor: pointer;
 }
 
@@ -58,6 +59,8 @@
 .page-tabs .page-list li a[href].current:hover,
 .section-tabs li a.current,
 .section-tabs li a.current:hover {
-    background: rgba(0,0,0,0.3);
+    background: transparent;
+    color: #38bdf8;
+    border-bottom: 2px solid #38bdf8;
     cursor: default;
 }
