@@ -386,7 +386,7 @@ angular.module('index').controller('indexController', ['$scope', '$injector',
     // Replace the overall user interface with an informational message if the
     // user has manually logged out
     $scope.$on('guacLogout', function loggedOut() {
-        $scope.applicationState = ApplicationState.LOGGED_OUT;
+        setApplicationState(ApplicationState.LOGGED_OUT);
         $scope.reAuthenticating = false;
     });
 

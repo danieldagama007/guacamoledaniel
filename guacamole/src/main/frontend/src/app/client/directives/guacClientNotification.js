@@ -77,7 +77,8 @@ angular.module('client').directive('guacClientNotification', [function guacClien
             0x0207: true,
             0x0208: true,
             0x0301: true,
-            0x0308: true
+            0x0308: true,
+            0x031D: true
         };
 
         /**
@@ -90,7 +91,8 @@ angular.module('client').directive('guacClientNotification', [function guacClien
             0x0203: true,
             0x0207: true,
             0x0208: true,
-            0x0308: true
+            0x0308: true,
+            0x031D: true
         };
 
         /**
@@ -147,7 +149,7 @@ angular.module('client').directive('guacClientNotification', [function guacClien
         const RECONNECT_COUNTDOWN = {
             text: "CLIENT.TEXT_RECONNECT_COUNTDOWN",
             callback: RECONNECT_ACTION.callback,
-            remaining: 15
+            remaining: 30
         };
 
         /**
@@ -224,6 +226,9 @@ angular.module('client').directive('guacClientNotification', [function guacClien
                 // Determine whether the reconnect countdown applies
                 const countdown = (status in CLIENT_AUTO_RECONNECT) ? RECONNECT_COUNTDOWN : null;
 
+                // Use custom header for queue
+                const titleId = (status === 0x031D || status === 0x0208) ? "CLIENT.DIALOG_HEADER_QUEUE" : "CLIENT.DIALOG_HEADER_CONNECTION_ERROR";
+
                 // Use the guacTranslate service to determine if there is a translation for
                 // this error code; if not, use the default
                 guacTranslate(errorId, defaultErrorId).then(
@@ -231,7 +236,7 @@ angular.module('client').directive('guacClientNotification', [function guacClien
                     // Show error status
                     translationResult => notifyConnectionClosed({
                         className : "error",
-                        title     : "CLIENT.DIALOG_HEADER_CONNECTION_ERROR",
+                        title     : titleId,
                         text      : {
                             key : translationResult.id
                         },
@@ -253,6 +258,9 @@ angular.module('client').directive('guacClientNotification', [function guacClien
                 // Determine whether the reconnect countdown applies
                 const countdown = (status in TUNNEL_AUTO_RECONNECT) ? RECONNECT_COUNTDOWN : null;
 
+                // Use custom header for queue
+                const titleId = (status === 0x031D || status === 0x0208) ? "CLIENT.DIALOG_HEADER_QUEUE" : "CLIENT.DIALOG_HEADER_CONNECTION_ERROR";
+
                 // Use the guacTranslate service to determine if there is a translation for
                 // this error code; if not, use the default
                 guacTranslate(errorId, defaultErrorId).then(
@@ -260,7 +268,7 @@ angular.module('client').directive('guacClientNotification', [function guacClien
                     // Show error status
                     translationResult => notifyConnectionClosed({
                         className : "error",
-                        title     : "CLIENT.DIALOG_HEADER_CONNECTION_ERROR",
+                        title     : titleId,
                         text      : {
                             key : translationResult.id
                         },

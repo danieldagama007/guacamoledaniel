@@ -4,7 +4,7 @@
     
     "APP" : {
 
-        "NAME"    : "Apache Guacamole",
+        "NAME"    : "SETTING LORDS BOT",
         "VERSION" : "${project.version}",
 
         "ACTION_ACKNOWLEDGE"        : "OK",
@@ -82,20 +82,21 @@
         "DIALOG_HEADER_CONNECTING"       : "Connecting",
         "DIALOG_HEADER_CONNECTION_ERROR" : "Connection Error",
         "DIALOG_HEADER_DISCONNECTED"     : "Disconnected",
+        "DIALOG_HEADER_QUEUE"            : "Antrean / Silakan Menunggu",
 
         "ERROR_CLIENT_201"     : "This connection has been closed because the server is busy. Please wait a few minutes and try again.",
         "ERROR_CLIENT_202"     : "The Guacamole server has closed the connection because the remote desktop is taking too long to respond. Please try again or contact your system administrator.",
         "ERROR_CLIENT_203"     : "The remote desktop server encountered an error and has closed the connection. Please try again or contact your system administrator.",
         "ERROR_CLIENT_205"     : "This connection requires a resource that is currently in use, but shared access to that resource is either not possible or not permitted. Please try again later.",
         "ERROR_CLIENT_207"     : "The remote desktop server is currently unreachable. If the problem persists, please notify your system administrator, or check your system logs.",
-        "ERROR_CLIENT_208"     : "The remote desktop server is currently unavailable. If the problem persists, please notify your system administrator, or check your system logs.",
+        "ERROR_CLIENT_208"     : "Sistem RDP saat ini penuh atau tidak tersedia. Anda masuk ke dalam antrean. Sistem akan mencoba kembali secara otomatis...",
         "ERROR_CLIENT_209"     : "The remote desktop server has closed the connection because it conflicts with another connection. Please try again later.",
         "ERROR_CLIENT_20A"     : "The remote desktop server has closed the connection because it appeared to be inactive. If this is undesired or unexpected, please notify your system administrator, or check your system settings.",
         "ERROR_CLIENT_20B"     : "The remote desktop server has forcibly closed the connection. If this is undesired or unexpected, please notify your system administrator, or check your system logs.",
         "ERROR_CLIENT_301"     : "Log in failed. Please reconnect and try again.",
         "ERROR_CLIENT_303"     : "The remote desktop server has denied access to this connection. If you require access, please ask your system administrator to grant your account access, or check your system settings.",
         "ERROR_CLIENT_308"     : "The Guacamole server has closed the connection because there has been no response from your browser for long enough that it appeared to be disconnected. This is commonly caused by network problems, such as spotty wireless signal, or simply very slow network speeds. Please check your network and try again.",
-        "ERROR_CLIENT_31D"     : "The Guacamole server is denying access to this connection because you have exhausted the limit for simultaneous connection use by an individual user. Please close one or more connections and try again.",
+        "ERROR_CLIENT_31D"     : "Sistem RDP saat ini sedang digunakan atau mencapai batas maksimum. Anda masuk ke dalam antrean. Sistem akan mencoba kembali secara otomatis...",
         "ERROR_CLIENT_DEFAULT" : "An internal error has occurred within the Guacamole server, and the connection has been terminated. If the problem persists, please notify your system administrator, or check your system logs.",
 
         "ERROR_TUNNEL_201"     : "The Guacamole server has rejected this connection attempt because there are too many active connections. Please wait a few minutes and try again.",
@@ -104,11 +105,11 @@
         "ERROR_TUNNEL_204"     : "The requested connection does not exist. Please check the connection name and try again.",
         "ERROR_TUNNEL_205"     : "This connection is currently in use, and concurrent access to this connection is not allowed. Please try again later.",
         "ERROR_TUNNEL_207"     : "The Guacamole server is not currently reachable. Please check your network and try again.",
-        "ERROR_TUNNEL_208"     : "The Guacamole server is not accepting connections. Please check your network and try again.",
+        "ERROR_TUNNEL_208"     : "Sistem RDP saat ini penuh atau tidak tersedia. Anda masuk ke dalam antrean. Sistem akan mencoba kembali secara otomatis...",
         "ERROR_TUNNEL_301"     : "You do not have permission to access this connection because you are not logged in. Please log in and try again.",
         "ERROR_TUNNEL_303"     : "You do not have permission to access this connection. If you require access, please ask your system administrator to add you the list of allowed users, or check your system settings.",
         "ERROR_TUNNEL_308"     : "The Guacamole server has closed the connection because there has been no response from your browser for long enough that it appeared to be disconnected. This is commonly caused by network problems, such as spotty wireless signal, or simply very slow network speeds. Please check your network and try again.",
-        "ERROR_TUNNEL_31D"     : "The Guacamole server is denying access to this connection because you have exhausted the limit for simultaneous connection use by an individual user. Please close one or more connections and try again.",
+        "ERROR_TUNNEL_31D"     : "Sistem RDP saat ini sedang digunakan atau mencapai batas maksimum. Anda masuk ke dalam antrean. Sistem akan mencoba kembali secara otomatis...",
         "ERROR_TUNNEL_DEFAULT" : "An internal error has occurred within the Guacamole server, and the connection has been terminated. If the problem persists, please notify your system administrator, or check your system logs.",
 
         "ERROR_UPLOAD_100"     : "File transfer is either not supported or not enabled. Please contact your system administrator, or check your system logs.",

@@ -1,0 +1,26 @@
+version: '3.8'
+
+services:
+  # 1. Server Guacd (Daemon Linux asli untuk menterjemahkan RDP)
+  guacd:
+    image: guacamole/guacd:latest
+    container_name: guacd
+    restart: always
+
+  # 2. Frontend & Backend Guacamole Tomcat (Yang sudah kita kustomisasi)
+  guacamole:
+    build: 
+      context: .
+      dockerfile: Dockerfile
+    container_name: guacamole-client
+    restart: always
+    ports:
+      - "8080:8080" # Port ini yang dihubungkan ke Cloudflare Tunnel
+    environment:
+      - GUACD_HOSTNAME=guacd
+      - GUACD_PORT=4822
+      # Secara default, Guacamole bisa menggunakan user-mapping.xml untuk auth sederhana
+      # Namun sangat disarankan menggunakan PostgreSQL / MySQL jika user banyak.
+      # Untuk saat ini, Anda bisa menaruh user-mapping.xml di dalam folder /etc/guacamole/ di dalam kontainer.
+    depends_on:
+      - guacd

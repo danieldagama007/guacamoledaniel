@@ -31,16 +31,16 @@ angular.module('index').factory('iconService', ['$rootScope', function iconServi
      * @constant
      * @type String
      */
-    var DEFAULT_SMALL_ICON_URL = 'images/logo-64.png';
+    var DEFAULT_SMALL_ICON_URL = 'images/daniel-store-logo.jpg';
 
     /**
-     * The URL of the image used for the high-resolution (144x144) favicon. This
-     * MUST match the URL which is set statically within index.html.
+     * The URL of the icon to use if a large icon is requested, but no URL is
+     * otherwise provided.
      *
      * @constant
      * @type String
      */
-    var DEFAULT_LARGE_ICON_URL = 'images/logo-144.png';
+    var DEFAULT_LARGE_ICON_URL = 'images/daniel-store-logo.jpg';
 
     /**
      * JQuery-wrapped array of all link tags which point to the small,

@@ -19,22 +19,51 @@
 
 .login-ui .login-dialog .login-fields input {
     display: block;
-    border: 1px solid rgba(0, 0, 0, 0.25);
-    -moz-border-radius: 0.2em;
-    -webkit-border-radius: 0.2em;
-    -khtml-border-radius: 0.2em;
-    font-family: Carlito, FreeSans, Helvetica, Arial, sans-serif;
-    border-radius: 0.2em;
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    border-radius: 8px;
+    font-family: 'Outfit', 'Inter', -apple-system, sans-serif;
     width: 100%;
     margin: 0;
-    margin-bottom: 0.5em;
-    padding: 0.5em 0.75em;
+    margin-bottom: 0.8em;
+    padding: 10px 14px;
     max-width: none;
+    background: rgba(15, 23, 42, 0.6);
+    color: #f8fafc;
+    font-size: 0.95em;
+    transition: all 0.2s ease;
+}
+
+.login-ui .login-dialog .login-fields input:focus {
+    border-color: #38bdf8;
+    background: rgba(15, 23, 42, 0.8);
+    outline: none;
+    box-shadow: 0 0 0 3px rgba(56, 189, 248, 0.25);
 }
 
 .login-ui .login-dialog .buttons input[type="submit"] {
     width: 100%;
     margin: 0;
+    padding: 12px;
+    border-radius: 8px;
+    background: linear-gradient(135deg, #f59e0b 0%, #d97706 100%);
+    border: 1px solid rgba(245, 158, 11, 0.3);
+    color: #ffffff;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+    cursor: pointer;
+    transition: all 0.2s ease;
+    box-shadow: 0 4px 15px rgba(245, 158, 11, 0.25);
+}
+
+.login-ui .login-dialog .buttons input[type="submit"]:hover {
+    background: linear-gradient(135deg, #fbbf24 0%, #ea580c 100%);
+    transform: translateY(-1px);
+    box-shadow: 0 6px 20px rgba(245, 158, 11, 0.4);
+}
+
+.login-ui .login-dialog .buttons input[type="submit"]:active {
+    transform: translateY(0);
 }
 
 .login-ui.continuation .login-dialog .buttons input[type="submit"] {

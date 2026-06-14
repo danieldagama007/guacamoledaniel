@@ -125,7 +125,7 @@ angular.module('settings').provider('preferenceService', ['$injector',
          * 
          * @type Boolean
          */
-        emulateAbsoluteMouse : true,
+        emulateAbsoluteMouse : false,
 
         /**
          * The default input method. This may be any of the values defined

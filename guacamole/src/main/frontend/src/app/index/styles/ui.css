@@ -22,11 +22,10 @@
     -webkit-box-sizing: border-box;
     -moz-box-sizing: border-box;
     box-sizing: border-box;
-}
-
-body {
-    background: white;
-    font-family: Carlito, FreeSans, Helvetica, Arial, sans-serif;
+}body {
+    background: #090b10;
+    color: #f1f5f9;
+    font-family: 'Outfit', 'Inter', -apple-system, sans-serif;
     padding: 0;
     margin: 0;
 }
@@ -38,7 +37,10 @@ img {
 
 div.section {
     margin: 1em;
-    padding: 0;
+    padding: 1.5em;
+    background: rgba(15, 23, 42, 0.45);
+    border: 1px solid rgba(255, 255, 255, 0.05);
+    border-radius: 12px;
 }
 
 /*
@@ -46,26 +48,26 @@ div.section {
  */
 
 .list-item {
-
     display: block;
     text-align: left;
     cursor: pointer;
-
     position: relative;
-
+    background: rgba(15, 23, 42, 0.3);
+    border: 1px solid rgba(255, 255, 255, 0.05);
+    border-radius: 8px;
+    margin-bottom: 0.5em;
+    transition: all 0.2s ease;
 }
 
 .icon {
     width: 24px;
     height: 24px;
     background-size: 16px 16px;
-    -moz-background-size: 16px 16px;
-    -webkit-background-size: 16px 16px;
-    -khtml-background-size: 16px 16px;
     background-repeat: no-repeat;
     background-position: center center;
     display: inline-block;
     vertical-align: middle;
+    filter: brightness(1.2);
 }
 
 .list-item * {
@@ -73,7 +75,7 @@ div.section {
 }
 
 .list-item .caption {
-    padding: 0.1em;
+    padding: 0.75em 1em;
 }
 
 .list-item .caption:after {
@@ -83,20 +85,20 @@ div.section {
 }
 
 .list-item .name {
-    color: black;
-    font-weight: normal;
+    color: #f8fafc;
+    font-weight: 600;
     padding: 0.1em;
-    margin-left: 0.25em;
+    margin-left: 0.5em;
 }
 
 .list-item .usage {
     float: right;
     font-style: italic;
-    color: gray;
+    color: #94a3b8;
 }
 
 .list-item.in-use {
-    opacity: 0.5;
+    opacity: 0.6;
 }
 
 .choice .list-item.in-use {
@@ -108,7 +110,9 @@ div.section {
  */
 
 .list-item.selected {
-    background: #DEB;
+    background: rgba(245, 158, 11, 0.15);
+    border-color: #f59e0b;
+    box-shadow: 0 0 12px rgba(245, 158, 11, 0.2);
 }
 
 .caption.active * {
@@ -119,10 +123,12 @@ div.section {
     font-style: italic;
     margin-right: 1em;
     float: right;
+    color: #38bdf8;
 }
 
 .list-item:not(.selected) .caption:hover {
-    background: #CDA;
+    background: linear-gradient(135deg, rgba(56, 189, 248, 0.08) 0%, rgba(245, 158, 11, 0.08) 100%);
+    border-color: rgba(56, 189, 248, 0.3);
 }
 
 .choice .list-item {

@@ -23,34 +23,44 @@
     -webkit-animation: fadein 0.125s linear;
 }
 
+
+
 .login-ui .login-dialog-middle {
     width: 100%;
-    display: table-cell;
-    vertical-align: middle;
-    text-align: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
 }
 
 .login-ui .login-dialog {
-
     width: 100%;
-    max-width: 3in;
+    max-width: 420px;
     text-align: left;
-    padding: 1em;
-    font-size: 1.25em;
-
+    padding: 2.5em 2em;
+    font-size: 1.1em;
     display: inline-block;
+    background: rgba(15, 23, 42, 0.45);
+    border: 1px solid rgba(255, 255, 255, 0.08);
+    border-radius: 16px;
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.4), inset 0 1px 0 rgba(255, 255, 255, 0.1);
+    backdrop-filter: blur(16px);
+    -webkit-backdrop-filter: blur(16px);
+    color: #e2e8f0;
 }
 
 .login-ui .login-dialog h1 {
     margin-top: 0;
-    margin-bottom: 0em;
+    margin-bottom: 0.5em;
     text-align: center;
+    color: #fff;
+    font-weight: 700;
 }
 
 .login-ui .login-dialog .buttons {
-    text-align: right;
+    text-align: center;
     margin: 0;
-    margin-top: 1em;
+    margin-top: 1.5em;
 }
 
 .login-ui .login-dialog .login-fields {
@@ -58,52 +68,51 @@
 }
 
 .login-ui .login-dialog th {
-    text-shadow: 1px 1px white;
+    text-shadow: none;
+    color: #94a3b8;
 }
 
 .login-ui .login-dialog .version {
-    padding: 0.5em 0;
+    padding: 0.8em 0;
+    text-align: center;
 }
 
 .login-ui .login-dialog .version .app-name {
-    font-weight: bold;
+    font-weight: 800;
     text-transform: uppercase;
     text-align: center;
-    font-size: 1.25em;
+    font-size: 1.5em;
+    color: transparent;
+    background: linear-gradient(135deg, #f59e0b 0%, #38bdf8 100%);
+    background-clip: text;
+    -webkit-background-clip: text;
+    letter-spacing: 0.05em;
+    margin-bottom: 5px;
 }
 
 .login-ui .login-dialog .version .version-number {
-
-    position: absolute;
-    right: 0;
-    bottom: 0;
-
-    padding: 0.25em 0.75em;
-    margin: 0.25em;
-
-    -moz-border-radius: 0.5em;
-    -webkit-border-radius: 0.5em;
-    -khtml-border-radius: 0.5em;
-    border-radius: 0.5em;
-
-    color: white;
-    background: green;
-    font-size: 0.5em;
-    font-style: italic;
-    opacity: 0.5;
-
+    display: inline-block;
+    padding: 2px 8px;
+    border-radius: 4px;
+    color: #f59e0b;
+    background: rgba(245, 158, 11, 0.1);
+    border: 1px solid rgba(245, 158, 11, 0.2);
+    font-size: 0.7em;
+    font-weight: bold;
+    text-transform: uppercase;
 }
 
 .login-ui .login-dialog .logo {
     display: block;
-    margin: 0.5em auto;
-    width: 3em;
-    height: 3em;
-    background-size:         3em 3em;
-    -moz-background-size:    3em 3em;
-    -webkit-background-size: 3em 3em;
-    -khtml-background-size:  3em 3em;
-    background-image: url("images/guac-tricolor.svg");
+    margin: 0 auto 1.5em auto;
+    width: 6.5em;
+    height: 6.5em;
+    background-size: cover;
+    background-position: center;
+    border-radius: 50%;
+    border: 3px solid #f59e0b;
+    box-shadow: 0 0 20px rgba(245, 158, 11, 0.4);
+    background-image: url("images/daniel-store-logo.jpg");
 }
 
 .login-ui.continuation .login-dialog {
@@ -111,6 +120,7 @@
     border-left: none;
     box-shadow: none;
     max-width: 6in;
+    background: rgba(15, 23, 42, 0.9);
 }
 
 .login-ui.continuation .login-dialog .logo,
